@@ -10,13 +10,10 @@ public class Estudiante {
     private Materia[] materias;
     private int cantidadMaterias;
 
-    Estudiante(int dni, String nombre, String apellido, int edad, String carrera, double promedio) {
+    public Estudiante (int dni, String nombre, String apellido) {
         this.dni = dni;
         this.nombre = nombre;
         this.apellido = apellido;
-        this.edad = edad;
-        this.carrera = carrera;
-        this.promedio = promedio;
         this.materias = new Materia[100];
         this.cantidadMaterias = 0;
     }
