@@ -68,14 +68,22 @@ public class Carrera {
     public void listarEstudiantes() {
         System.out.println("Lista de estudiantes en la carrera " + this.nombre + ":");
         for (int i = 0; i < cantidadEstudiantes; i++) {
-            System.out.println("- " + estudiantes[i].getNombre() + " " +estudiantes[i].getApellido() +", ");
+            System.out.println("- " + estudiantes[i].getNombre() + " " + estudiantes[i].getApellido() + ", ");
         }
 
     }
 
     public Estudiante buscarEstudiante(int codigoEstudiante) {
-        for (int i=0; i < cantidadEstudiantes; i++) {
-            if(estudiantes[i].get)
+        for (int i = 0; i < cantidadEstudiantes; i++) {
+            if (estudiantes[i].getDni() == codigoEstudiante) {
+                return estudiantes[i];
+            } 
+        } if (cantidadEstudiantes == 0) {
+            System.out.println("No hay estudiantes registrados en la carrera.");
+        } else {
+            System.out.println("No se encontró el estudiante.");
         }
+        return null;
+
     }
 }
